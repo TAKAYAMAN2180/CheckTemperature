@@ -18,10 +18,6 @@ public class DirectoryLoader {
         this.path = path;
     }
 
-    public static void main(String[] args) {
-        new DirectoryLoader(Paths.get("C:\\Users\\takay\\OneDrive - 学校法人立命館\\Welcome Festival\\Welcome Event Captain")).analyze();
-    }
-
     public ArrayList<TemperatureFile> analyze() {
         ArrayList<TemperatureFile> temperatureFiles = new ArrayList<>();
 
