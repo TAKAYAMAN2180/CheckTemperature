@@ -1,4 +1,4 @@
-package util.analyze.format;//TODO:エラーメッセージをメンバに持たせる
+package util.analyze.format;
 
 public enum Status {
     //↓これは１箇所でしか与えないこと
