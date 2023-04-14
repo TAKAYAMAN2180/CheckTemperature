@@ -12,8 +12,6 @@ public class Launcher extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        Platform.setImplicitExit(false);
-
         Parent root = FXMLLoader.load(getClass().getResource("gui.fxml"));
         Scene scene = new Scene(root, 600, 474);
 

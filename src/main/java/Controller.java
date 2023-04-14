@@ -1,3 +1,5 @@
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
@@ -8,6 +10,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.io.File;
 import java.nio.file.Path;
@@ -43,6 +46,7 @@ public class Controller {
 
     private Path pathForLoadDirectory;
     private Path pathForSaveDirectory;
+
 
     @FXML
     public void onFileToSaveChosen() {
