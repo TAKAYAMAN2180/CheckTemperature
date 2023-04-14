@@ -74,21 +74,24 @@ public class Main {
 
         CmdManager.runCmd("cp -r " + directoryPathForLoad + " " + directoryPathForSave);
 
-        CmdManager.runCmd("mkdir " + directoryPathForSave + "\\〇");
-        CmdManager.runCmd("mkdir " + directoryPathForSave + "\\△");
-        CmdManager.runCmd("mkdir " + directoryPathForSave + "\\×");
+        CmdManager.runCmd("mkdir \"" + directoryPathForSave + "\\〇\"");
+        CmdManager.runCmd("mkdir \"" + directoryPathForSave + "\\△\"");
+        CmdManager.runCmd("mkdir \"" + directoryPathForSave + "\\×\"");
 
         for (TemperatureFile temperatureFile : temperatureFileArrayList) {
             switch (temperatureFile.resultStatus) {
-                case PERFECT ->
-                        CmdManager.runCmd("move " + temperatureFile.filePath + " " + directoryPathForSave + "\\〇");
+                case PERFECT -> {
+                    System.out.println("copy \"" + temperatureFile.filePath + "\" \"" + directoryPathForSave + "\\〇\"");
+                    CmdManager.runCmd("copy \"" + temperatureFile.filePath + "\" \"" + directoryPathForSave + "\\〇\"");
+                }
                 case BAD ->
-                        CmdManager.runCmd("move " + temperatureFile.filePath + " " + directoryPathForSave + "\\△");
+                        CmdManager.runCmd("copy \"" + temperatureFile.filePath + "\" \"" + directoryPathForSave + "\\△\"");
                 case IMPOSSIBLE ->
-                        CmdManager.runCmd("move " + temperatureFile.filePath + " " + directoryPathForSave + "\\×");
+                        CmdManager.runCmd("copy \"" + temperatureFile.filePath + "\" \"" + directoryPathForSave + "\\×\"");
             }
         }
 
+        //処理完了通知の実装
         Alert dialog = new Alert(Alert.AlertType.INFORMATION);
         dialog.setHeaderText(null);
         dialog.setContentText("処理が完了しました");

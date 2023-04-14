@@ -19,10 +19,9 @@ public class DataOutput {
     }
 
     public static void process(Path path, ArrayList<TemperatureFile> temperatureFiles) {
-        System.out.println(DataOutput.class.getClassLoader().getResource("result_template.xlsx"));
-
         Workbook wb = null;
-        try (InputStream fis = new FileInputStream(DataOutput.class.getClassLoader().getResource("result_template.xlsx").getFile())) {
+
+        try (InputStream fis = DataOutput.class.getClassLoader().getResourceAsStream("result_template.xlsx")) {
             if (fis != null) {
                 wb = WorkbookFactory.create(fis);
             }
