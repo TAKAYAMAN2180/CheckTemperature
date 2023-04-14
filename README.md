@@ -2,56 +2,14 @@
 
 このソフトウェアは指定されたテンプレートのExcelファイルに記入された体温記録を読み取り、問題がないかを確認したうえで、一覧を表示します。
 
-# DEMO
-
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
-
-# Features
-
-"hoge"のセールスポイントや差別化などを説明する
-
-# Requirement
-
-"hoge"を動かすのに必要なライブラリなどを列挙する
-
-* huga 3.5.2
-* hogehuga 1.0.2
-
-# Installation
-
-Requirementで列挙したライブラリなどのインストール方法を説明する
-
-```bash
-pip install huga_package
-```
-
-# Usage
-
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
-
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
-
-# Note
-
-注意点などがあれば書く
+# Info
+詳細については、[こちらの記事](https://qiita.com/TAKAYAMAN2180/items/d07527fab8487ef0263b)に記載しています。
+https://qiita.com/TAKAYAMAN2180/items/d07527fab8487ef0263b
 
 # Author
-
-作成情報を列挙する
-
-* 作成者
-* 所属
-* E-mail
+TAKAYAMAN 2180
 
 # License
-ライセンスを明示する
+Apache License Version 2.0, January 2004
 
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
-
-社内向けなら社外秘であることを明示してる
-
-"hoge" is Confidential.
+This application is under [Apache License Version 2.0](https://en.wikipedia.org/wiki/Apache_License).
