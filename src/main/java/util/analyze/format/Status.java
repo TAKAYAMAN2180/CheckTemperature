@@ -8,11 +8,11 @@ public enum Status {
     HAVE_DETAILS("詳細の記入あり"),
     LACK_OF_TEMPERATURE("体温記録の未記入"),
     LACK_OF_DATE("日数の不足"),
+    UNFORMATTED_RECORD_DATA("入力値のフォーマットエラー"),
 
-    FILE_NAME_ERROR("ファイル名を変更してください"),
+    FILE_NAME_ERROR("ファイル名のエラー"),
 
     CURIOUS("異常な記録"),
-    UNFORMATTED_RECORD_DATA("入力値のフォーマットエラー"),
     NO_RECORD("学生証番号の登録なし"),
     FORMAT_ERROR("Excelデータのフォーマットエラー"),
     EXTENSION_ERROR("データ拡張子の誤り"),
