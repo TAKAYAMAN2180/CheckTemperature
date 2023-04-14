@@ -1,5 +1,5 @@
 package util.loader;
-
+//TODO:0バイトのファイルがあったときも適切に処理する
 import org.apache.poi.ss.usermodel.*;
 import util.analyze.format.Status;
 import util.analyze.format.TemperatureFile;
@@ -54,7 +54,7 @@ public class FileLoader {
             } else if (!rowToCheck.getCell(7).getStringCellValue().equals("詳細もしくはその他体調不良等")) {
                 isFormatted = false;
             }
-        } catch (NullPointerException nullPointerException) {
+        } catch (NullPointerException|IllegalStateException exception) {
             isFormatted = false;
         }
 
@@ -156,6 +156,7 @@ public class FileLoader {
                     //不正な入力の値
                     hasStringInDateDate = true;
                 } catch (Exception exception) {
+                    System.err.println("日付の読み込み中に予期せぬエラーが発生しました");
                     exception.printStackTrace();
                     temperatureFile.hasError = true;
                     temperatureFile.canProcess = false;
@@ -242,7 +243,15 @@ public class FileLoader {
 
             //何のエラーもないとき
             if (!(hasDeficiencyInTemperatureDate || hasErrorInDateData)) {
-                temperatureTreeMap.put(getDate, getTemperature);
+                try {
+
+                    temperatureTreeMap.put(getDate, getTemperature);
+                } catch (Exception exception) {
+                    temperatureFile.hasError = true;
+                    temperatureFile.canProcess = false;
+
+                    temperatureFile.statusArrayList.add(Status.UNEXPECTED);
+                }
             }
         }
         temperatureFile.temperatures = temperatureTreeMap;

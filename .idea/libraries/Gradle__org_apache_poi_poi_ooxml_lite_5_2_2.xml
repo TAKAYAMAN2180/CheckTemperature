@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: org.apache.poi:poi-ooxml-lite:5.2.2">
+  <library name="Gradle: org.apache.poi:poi-ooxml-lite:5.2.2" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml-lite/5.2.2/5df31b69375131fc2163a5557093cb112be90ce1/poi-ooxml-lite-5.2.2.jar!/" />
     </CLASSES>

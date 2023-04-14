@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: org.apache.poi:poi-excelant:5.2.2">
+  <library name="Gradle: org.apache.poi:poi-excelant:5.2.2" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-excelant/5.2.2/ef5fd8fa2cddd62b4bb716efcccccf54b71b3145/poi-excelant-5.2.2.jar!/" />
     </CLASSES>

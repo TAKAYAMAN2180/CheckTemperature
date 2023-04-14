@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: org.lucee:log4j-core:2.17.2.0001L">
+  <library name="Gradle: org.lucee:log4j-core:2.17.2.0001L" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.lucee/log4j-core/2.17.2.0001L/1a1c2d1d1500a4a7082a2003816ac29bf5bd1bd3/log4j-core-2.17.2.0001L.jar!/" />
     </CLASSES>

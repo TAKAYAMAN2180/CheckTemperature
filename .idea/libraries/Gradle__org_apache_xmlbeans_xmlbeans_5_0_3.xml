@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: org.apache.xmlbeans:xmlbeans:5.0.3">
+  <library name="Gradle: org.apache.xmlbeans:xmlbeans:5.0.3" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.xmlbeans/xmlbeans/5.0.3/e1ef1382ae9dfb2438b82b6dd575566355c2f30f/xmlbeans-5.0.3.jar!/" />
     </CLASSES>

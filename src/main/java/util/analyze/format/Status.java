@@ -9,6 +9,8 @@ public enum Status {
     LACK_OF_TEMPERATURE("体温記録の未記入"),
     LACK_OF_DATE("日数の不足"),
 
+    FILE_NAME_ERROR("ファイル名を変更してください"),
+
     CURIOUS("異常な記録"),
     UNFORMATTED_RECORD_DATA("入力値のフォーマットエラー"),
     NO_RECORD("学生証番号の登録なし"),

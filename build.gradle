@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.10'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
 }
 
 group 'org.example'
@@ -11,8 +11,10 @@ repositories {
     mavenCentral()
 }
 
-sourceCompatibility = '17'
-targetCompatibility = '17'
+/*文字化け対策*/
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'

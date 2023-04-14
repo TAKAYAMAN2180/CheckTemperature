@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: org.apache.ant:ant-launcher:1.10.12">
+  <library name="Gradle: org.apache.ant:ant-launcher:1.10.12" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant-launcher/1.10.12/e090b4f9d3ecf45491cc16e759f1e843a1a224c0/ant-launcher-1.10.12.jar!/" />
     </CLASSES>

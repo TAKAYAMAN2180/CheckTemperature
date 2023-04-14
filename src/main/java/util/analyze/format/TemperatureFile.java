@@ -25,37 +25,11 @@ public class TemperatureFile {
 
     public TemperatureFile(Path filePath) {
         this.filePath = filePath;
-        init();
     }
 
     public void init() {
         writeErrorMsg("");
     }
-
-/*
-    public void setPersonalInfo() {
-        if (!isExcelFile) {
-            System.err.println("このメソッドはExcelファイルにしか適用できません。");
-            return;
-        }
-        Workbook workbookToRead = null;
-        try {
-            workbookToRead = WorkbookFactory.create(new File(this.filePath.toString()));
-        } catch (IOException e) {
-            System.err.println("予期せぬエラーが発生しました。");
-            e.printStackTrace();
-        }
-        Sheet sheet = workbookToRead.getSheetAt(0);
-        Row row = sheet.getRow(2);
-
-        Cell cellForName = row.getCell(1);
-        Cell cellForStudentNum = row.getCell(2);
-
-        //TODO:もう少し詳細な動きを考える
-        this.studentName = cellForName.getStringCellValue();
-        this.studentNum = String.valueOf((long) cellForStudentNum.getNumericCellValue());
-    }
-*/
 
 
     public void writeErrorMsg(String errorMsg) {
@@ -67,11 +41,30 @@ public class TemperatureFile {
         try (InputStream fis = new FileInputStream(this.filePath.toString())) {
             wb = WorkbookFactory.create(fis);
         } catch (FileNotFoundException fileNotFoundException) {
-            fileNotFoundException.printStackTrace();
+            //fileNotFoundException.printStackTrace();
+            hasError = true;
+            canProcess = false;
+            isExcelFile = false;
+            Status temp = Status.FILE_NAME_ERROR;
+            temp.addMsg("ファイル名を変えて再読み込みしてください。");
+            statusArrayList.add(temp);
+            return;
         } catch (IOException ioException) {
-            ioException.printStackTrace();
+            //ioException.printStackTrace();
+            hasError = true;
+            canProcess = false;
+            isExcelFile = false;
+            statusArrayList.add(Status.LOAD_ERROR);
+            return;
+        } catch (Exception exception) {
+
         }
-        Sheet sheet = wb.getSheetAt(0);
+        Sheet sheet = null;
+        try {
+            sheet = wb.getSheetAt(0);
+        } catch (NullPointerException nullPointerException) {
+            System.out.println("エラーが発生したファイル名→" + filePath);
+        }
         Row row = sheet.createRow(20);
         Cell cell = row.createCell(4);
 

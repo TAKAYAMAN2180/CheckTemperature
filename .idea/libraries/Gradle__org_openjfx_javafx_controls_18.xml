@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: org.openjfx:javafx-controls:18">
+  <library name="Gradle: org.openjfx:javafx-controls:18" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/18/4c9f77c97cbbf8a08dcc4718e856eabb19d1d215/javafx-controls-18.jar!/" />
     </CLASSES>

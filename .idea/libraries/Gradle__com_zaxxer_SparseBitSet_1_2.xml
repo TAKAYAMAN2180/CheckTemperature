@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: com.zaxxer:SparseBitSet:1.2">
+  <library name="Gradle: com.zaxxer:SparseBitSet:1.2" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zaxxer/SparseBitSet/1.2/8467c813d442837fcaeddbc42cf5c5359fab4933/SparseBitSet-1.2.jar!/" />
     </CLASSES>
